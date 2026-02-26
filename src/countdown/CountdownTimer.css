@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  background: #000;
+  font-family: "Courier New", monospace;
+}
+
+/* الصفحة */
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* الهاتف */
+.phone {
+  width: 320px;
+  height: 600px;
+  background: #111;
+  border-radius: 40px;
+  padding: 15px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+  border: 4px solid #222;
+  position: relative;
+}
+
+/* السماعة */
+.phone::before {
+  content: "";
+  width: 100px;
+  height: 10px;
+  background: #222;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* الشاشة */
+.screen {
+  background: #000;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  padding: 20px;
+  text-align: center;
+}
+
+/* العنوان */
+.header {
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #666;
+  margin: 0;
+}
+
+.main-title {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+  color: red;
+}
+
+/* التوقيت */
+.timer span {
+  display: block;
+  font-size: 40px;
+  margin: 8px 0;
+}
+
+/* عند الانتهاء */
+.expired {
+  font-size: 50px;
+  color: darkred;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
